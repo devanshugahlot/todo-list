@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TO-DO-LIST</title>
+    <link rel="stylesheet" href="todolist.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="heading">
+        <h2>To-Do List</h2>
+        <h2>To-Do List</h2>
+        <div class="row">
+          <input type="text " id="input" placeholder="Add task" />
+          <button>ADD</button>
+        </div>
+
+        <ul id="list-container">
+          <!-- <li>task 1</li>
+          <li>task 2</li>
+          <li>task 3</li> -->
+        </ul>
+      </div>
+    </div>
+
+    <script>
+      const my_list = document.querySelector("ul");
+      const my_button = document.querySelector("button");
+      const my_input = document.querySelector("input");
+
+      my_button.addEventListener("click", () => {
+        const txt = my_input.value; //Get the text from input field
+        my_input.value = ""; //clear the input field
+
+        const my_list_element = document.createElement("li"); //create the list element
+        const text_node = document.createTextNode(txt); //create a text node
+        my_list_element.append(text_node); // add the text to the list element
+
+        const my_delete_button = document.createElement("button"); //create a button
+        const delete_text_node = document.createTextNode("delete"); // create node with text 'delete'
+        my_delete_button.append(delete_text_node); //add the text to the button
+        my_delete_button.style.marginLeft = "100px"; // set the leftmargin of the button as 100px to maintain distance
+
+        my_list_element.append(my_delete_button); // add the delete button to the list element
+
+        my_delete_button.addEventListener("click", () => {
+          //add a event listener which deletes "my_list_element" when the button is clicked
+          my_list.removeChild(my_list_element);
+        });
+
+        my_list.appendChild(my_list_element); //add the list element to the list
+      });
+    </script>
+  </body>
+</html>
