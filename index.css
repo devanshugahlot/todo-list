@@ -6,15 +6,19 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: 'Signika Negative', sans-serif;}
+    /* font-family: 'Signika Negative', sans-serif; */
+ 
+}
 
 .container{
-    color: blue;
+    color: rgb(252, 252, 253);
     width: 100%;
-    height: 150vh;
+    height: 100vh;
     background-color: rgb(14, 14, 30);
     padding: 10px;
-    background-color: #002765;
+    /* background-color: #002765; */
+    background-image: linear-gradient(62deg, rgba(246, 121, 167, 0.855) 13%, rgba(255, 122, 151, 0.5) 4%),linear-gradient(44deg, rgba(0, 43, 99, 0.07922090238615942) 39%, rgba(242, 140, 143, 0.5) 18%),linear-gradient(118deg, rgba(84, 202, 242, 0.03152997265339608) 40%, rgba(247, 155, 187, 0.5) 54%),linear-gradient(58deg, rgba(90, 90, 237, 0.16144443572260592) 83%, rgba(249, 156, 142, 0.5) 23%);
+    
 
 }
 
@@ -22,18 +26,19 @@
 .heading{
     /* color: wheat; */
     max-width: 540px;
-    background: #fff;
+    background: rgba(0, 0, 0, 0.798);
     margin: 100px auto 20px;
     padding: 40px 30px 70px;
     border-radius: 10px;
     max-height: 500px;
     overflow: scroll;
+    height: 50vh;
     
     
 }
 
 .heading h2{
-    color: #002765;
+    color: #fcfdfd;
     text-align: center;
     display: flex;
     justify-content: center;
@@ -57,7 +62,8 @@ input{
     outline: none;
     background: transparent;
     padding: 10px;
-    font-size: 14px;
+    font-size: 20px;
+    font-family: 'Pacifico', cursive;
 }
 
 button{
@@ -65,18 +71,34 @@ button{
     outline: none;
     padding: 16px 50px;
     border-radius: 40px;
+    cursor: pointer;
     color:#fff ;
-    background: #ff5945;
+    background: rgb(249, 112, 135);
+    touch-action: manipulation;
     
 }
 
 
+button:hover {
+    background-color: rgb(249, 112, 135);
+  }
+  
+  button:active {
+    box-shadow: #422800 2px 2px 0 0;
+    transform: translate(2px, 2px);
+  }
+
+
 ul li{
     list-style: none;
-    font-size: 17px;
+    font-family: 'Cabin Condensed', sans-serif;
+font-family: 'Pacifico', cursive;
+    font-size: 20px;
     padding: 12px 8px 12px 50px;
     cursor: pointer;
     /* user-select: none; */
     display: flex;
     justify-content: flex-end;
 }
+
+
